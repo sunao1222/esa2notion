@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "esa2notion"
+version = "0.1.0"
+description = "Migrate esa Markdown exports and image bytes into Notion"
+requires-python = ">=3.12"
+dependencies = ["requests>=2.32,<3", "python-frontmatter>=1.1,<2", "mistune>=3.1,<4"]
+
+[project.scripts]
+esa2notion = "esa2notion.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
